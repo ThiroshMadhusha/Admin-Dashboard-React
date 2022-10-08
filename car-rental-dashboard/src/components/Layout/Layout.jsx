@@ -1,5 +1,4 @@
 import React from "react";
-
 import Router from "../../routes/Router";
 import Sidebar from "../Sidebar/Sidebar";
 import TopNav from "../TopNav/TopNav";
@@ -10,6 +9,7 @@ const Layout = () => {
       <Sidebar />
       <div className="main__layout">
         <TopNav />
+
         <div className="content">
           <Router />
         </div>
