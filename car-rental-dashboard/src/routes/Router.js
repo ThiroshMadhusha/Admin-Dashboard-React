@@ -1,25 +1,32 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Dashboard from "../pages/Dashboard";
 import Bookings from "../pages/Bookings";
 import SellCar from "../pages/SellCar";
-import Settings from "../pages/Settings";
+import Service from "../pages/Service";
+import AboutUs from "../pages/AboutUs";
+import Contact from "../pages/Contact";
+import Setting from "../pages/Setting";
+import Profile from "../pages/Profile";
+
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={<Navigate to="/dashboard" element={<Dashboard />} />}
-        />
-
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/bookings" element={<Bookings />} />
-        <Route path="/sellcar" element={<SellCar />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={<Navigate to="/dashboard" element={<Dashboard />} />}
+      />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/bookings" element={<Bookings />} />
+      <Route path="/sell-car" element={<SellCar />} />
+      <Route path="/setting" element={<Setting />} />
+      <Route path="/service" element={<Service />} />
+      <Route path="/about" element={<AboutUs />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/profile" element={<Profile />} />
+    </Routes>
   );
 };
 
